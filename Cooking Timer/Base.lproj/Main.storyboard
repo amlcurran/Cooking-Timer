@@ -17,21 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="First View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
-                                <rect key="frame" x="221" y="279" width="157.5" height="41.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by FirstViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L">
-                                <rect key="frame" x="203" y="329" width="194.5" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="whJ-SX-4Mz">
-                                <rect key="frame" x="80" y="28" width="438" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="whJ-SX-4Mz">
+                                <rect key="frame" x="80" y="28" width="370" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -44,22 +31,32 @@
                                     <!--1969-12-31 23:00:00 +0000-->
                                 </date>
                             </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHU-b7-Fbi">
+                                <rect key="frame" x="483" y="28" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonClicked:" destination="9pv-A4-QxB" eventType="touchUpInside" id="0Zo-Cz-sh7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="whJ-SX-4Mz" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="8" id="0BO-0R-i95"/>
-                            <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="6BV-lF-sBN"/>
                             <constraint firstItem="whJ-SX-4Mz" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="64" id="6dH-xg-XsM"/>
                             <constraint firstItem="xYo-rP-mTc" firstAttribute="top" secondItem="whJ-SX-4Mz" secondAttribute="bottom" constant="28" id="CbF-q8-ToL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xYo-rP-mTc" secondAttribute="trailing" constant="-16" id="O2K-wY-ObF"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" symbolic="YES" id="cfb-er-3JN"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="e1l-AV-tCB"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="whJ-SX-4Mz" secondAttribute="trailing" constant="66" id="eKr-3u-xz1"/>
-                            <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
+                            <constraint firstItem="kHU-b7-Fbi" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="8" id="bfC-TA-H7h"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kHU-b7-Fbi" secondAttribute="trailing" constant="55" id="dsC-gx-4cI"/>
+                            <constraint firstItem="kHU-b7-Fbi" firstAttribute="leading" secondItem="whJ-SX-4Mz" secondAttribute="trailing" constant="33" id="gSc-5E-Q1i"/>
                             <constraint firstItem="xYo-rP-mTc" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-16" id="lf7-ci-1OK"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="datePicker" destination="xYo-rP-mTc" id="sqO-rh-df2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>

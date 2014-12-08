@@ -9,6 +9,8 @@
 #import "FirstViewController.h"
 
 @interface FirstViewController ()
+- (IBAction)buttonClicked:(id)sender;
+@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 
 @end
 
@@ -24,4 +26,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)buttonClicked:(id)sender {
+    
+}
 @end
