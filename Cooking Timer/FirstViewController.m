@@ -27,6 +27,10 @@
 }
 
 - (IBAction)buttonClicked:(id)sender {
+    // Get the count down the user has entered into the date picker
     
+    // Create a timer with the number of seconds
+    
+    // Create an alert (or something) when the timer counts down
 }
 @end
