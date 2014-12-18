@@ -28,9 +28,17 @@
 
 - (IBAction)buttonClicked:(id)sender {
     // Get the count down the user has entered into the date picker
+    NSTimeInterval countdown = [self.datePicker countDownDuration];
     
     // Create a timer with the number of seconds
+    [NSTimer scheduledTimerWithTimeInterval:countdown target:self selector:@selector(timerPinged:) userInfo:nil repeats:NO];
+
     
-    // Create an alert (or something) when the timer counts down
 }
+
+- (void)timerPinged:(NSTimer *)timer
+{
+    [[[UIAlertView alloc] initWithTitle:@"Ping" message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil] show];
+}
+
 @end
