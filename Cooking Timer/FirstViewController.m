@@ -7,11 +7,13 @@
 //
 
 #import "FirstViewController.h"
+#import "Cooking_Timer-Swift.h"
 
 @interface FirstViewController ()
 - (IBAction)buttonClicked:(id)sender;
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 @property (weak, nonatomic) IBOutlet UITextField *timerName;
+@property (nonatomic, strong) NotificationController *notificationController;
 
 @end
 
@@ -20,6 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.notificationController = [NotificationController new];
+    [self.notificationController checkNotificationSettings];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,15 +34,13 @@
 - (IBAction)buttonClicked:(id)sender {
     // Get the count down the user has entered into the date picker
     NSTimeInterval countdown = [self.datePicker countDownDuration];
-    
-    // Create a dictionary which holds the name of the picker
-    NSDictionary *dictionary = @{ @"title" : self.timerName.text };
-    
     // Create a timer with the number of seconds, if we're in debug, make the countdown shorter
 #ifdef DEBUG
     countdown = 15.0;
 #endif
-    [NSTimer scheduledTimerWithTimeInterval:countdown target:self selector:@selector(timerPinged:) userInfo:dictionary repeats:NO];
+    
+    NotificationController *controller = [NotificationController new];
+    [controller send:countdown foodName:self.timerName.text];
 }
 
 - (void)timerPinged:(NSTimer *)timer
