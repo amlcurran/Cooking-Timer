@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		125FFACA1A431ADB0024F5F4 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125FFAC91A431ADB0024F5F4 /* NotificationController.swift */; };
 		868A21EB1A3367C70093FABE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 868A21EA1A3367C70093FABE /* main.m */; };
 		868A21EE1A3367C70093FABE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 868A21ED1A3367C70093FABE /* AppDelegate.m */; };
 		868A21F11A3367C70093FABE /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 868A21F01A3367C70093FABE /* FirstViewController.m */; };
@@ -29,8 +28,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		125FFAC81A431ADB0024F5F4 /* Cooking Timer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Cooking Timer-Bridging-Header.h"; sourceTree = "<group>"; };
-		125FFAC91A431ADB0024F5F4 /* NotificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		868A21E51A3367C70093FABE /* Cooking Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cooking Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		868A21E91A3367C70093FABE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		868A21EA1A3367C70093FABE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -97,8 +94,6 @@
 				868A21F81A3367C70093FABE /* Images.xcassets */,
 				868A21FA1A3367C70093FABE /* LaunchScreen.xib */,
 				868A21E81A3367C70093FABE /* Supporting Files */,
-				125FFAC91A431ADB0024F5F4 /* NotificationController.swift */,
-				125FFAC81A431ADB0024F5F4 /* Cooking Timer-Bridging-Header.h */,
 			);
 			path = "Cooking Timer";
 			sourceTree = "<group>";
@@ -229,7 +224,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				125FFACA1A431ADB0024F5F4 /* NotificationController.swift in Sources */,
 				868A21F41A3367C70093FABE /* SecondViewController.m in Sources */,
 				868A21EE1A3367C70093FABE /* AppDelegate.m in Sources */,
 				868A21F11A3367C70093FABE /* FirstViewController.m in Sources */,
@@ -294,7 +288,6 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -337,7 +330,6 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
-				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -359,13 +351,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Cooking Timer/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Cooking Timer/Cooking Timer-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -373,12 +361,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Cooking Timer/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Cooking Timer/Cooking Timer-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -435,7 +420,6 @@
 				868A220D1A3367C70093FABE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		868A220E1A3367C70093FABE /* Build configuration list for PBXNativeTarget "Cooking TimerTests" */ = {
 			isa = XCConfigurationList;
@@ -444,7 +428,6 @@
 				868A22101A3367C70093FABE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
